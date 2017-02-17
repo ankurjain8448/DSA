@@ -8,6 +8,7 @@ class Graph(object):
 		nodes = nodes+1
 		self.graph = [0]*nodes
 		self.nodes = nodes
+		self.visited = [False]*self.nodes
 		for i in xrange(nodes):
 			self.graph[i] = []
 
@@ -25,3 +26,10 @@ class Graph(object):
 	@staticmethod
 	def sample_data():
 		return [[2,4], [1,],[1,2,],[1,3,5],[]]
+
+	def fill_graph(self, data):
+		u = 0
+		for _ in data:
+			u+=1
+			for v in _:
+				self.add_edge(u,v)
