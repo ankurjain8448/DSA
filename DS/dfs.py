@@ -9,6 +9,13 @@ class Graph(object):
 	def add_edge(self, u, v):
 		self.graph[u].append(v)
 
+	def dfs_allNodes(self):
+		print "dfs_allNodes"
+		self.visited = [False]*self.nodes
+		for each_node in xrange(1, self.nodes):
+			if not self.visited[each_node]:
+				self.dfs_iterative(each_node)
+
 	def dfs(self, start_node):
 		"""
 			Print all nodes reachable from start_node, not all the nodes, i.e it 
@@ -69,3 +76,4 @@ if __name__ == '__main__':
 			g.add_edge(u,v)
 	# g.print_graph()
 	g.dfs(1)
+	# g.dfs_allNodes()
