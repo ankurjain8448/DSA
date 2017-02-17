@@ -1,13 +1,6 @@
-class Graph(object):
-	def __init__(self, nodes):
-		nodes = nodes+1
-		self.graph = [0]*nodes
-		self.nodes = nodes
-		for i in xrange(nodes):
-			self.graph[i] = []
+from graph import Graph
 
-	def add_edge(self, u, v):
-		self.graph[u].append(v)
+class Graph(Graph):
 
 	def dfs_allNodes(self):
 		print "dfs_allNodes"
@@ -50,23 +43,10 @@ class Graph(object):
 					if not self.visited[each_node]:
 						stack.append(each_node)
 
-	def print_graph(self):
-		print "========== GRAPH ============="
-		for index, each_row in enumerate(self.graph):
-			if index == 0:
-				continue
-			print each_row
-		print "========== GRAPH END ============="
-
 
 if __name__ == '__main__':
-	Input = [
-	[2,4],
-	[1,],
-	[1,2,],
-	[1,3,5],
-	[]
-	]
+	Input = Graph.sample_data()
+
 	nodes = len(Input)
 	g = Graph(nodes)
 	u = 0
