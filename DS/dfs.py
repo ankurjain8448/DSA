@@ -46,14 +46,11 @@ class Graph(Graph):
 
 if __name__ == '__main__':
 	Input = Graph.sample_data()
-
 	nodes = len(Input)
+
 	g = Graph(nodes)
-	u = 0
-	for _ in Input:
-		u+=1
-		for v in _:
-			g.add_edge(u,v)
+
+	g.fill_graph(Input)
 	# g.print_graph()
 	g.dfs(1)
 	# g.dfs_allNodes()
