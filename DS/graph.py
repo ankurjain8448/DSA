@@ -3,7 +3,7 @@ class Graph(object):
 	def __init__(self, nodes):
 		"""
 			nodes starts with 1, no 0 node is here !!! 
-			Just to keep things a bit simple
+			Just to keep things a bit simple.
 		"""
 		nodes = nodes+1
 		self.graph = [0]*nodes
