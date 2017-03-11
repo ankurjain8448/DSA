@@ -26,6 +26,5 @@ def quickSort(a, start, end):
 if __name__ == '__main__':
 	a = [1,-4,2,9,5,8,6,0]
 	n = len(a) -1
-	print a
 	quickSort(a,0,n)
 	print a
