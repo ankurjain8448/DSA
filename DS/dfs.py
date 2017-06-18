@@ -45,7 +45,7 @@ class Graph(Graph):
 
 
 if __name__ == '__main__':
-	Input = Graph.sample_data()
+	Input = [[2,4], [1,],[1,2,8,9],[1,3,5],[6,7],[],[],[10],[],[11],[]]
 	nodes = len(Input)
 
 	g = Graph(nodes)
