@@ -29,7 +29,6 @@ class SegmentTree(object):
 			self.ST[sci] = self.arr[aci]
 		else:
 			mid = (ace + aci)/2
-			print "divide at ", aci, mid, ace
 			self.ST[sci] = max(self.create(l, aci, mid), self.create(r, mid+1, ace))
 		return self.ST[sci]
 
