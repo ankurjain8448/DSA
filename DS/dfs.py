@@ -30,7 +30,8 @@ class Graph(Graph):
 			self.visited[start_node] = True
 			print "visited : ", start_node
 			for each_node in self.graph[start_node]:
-				self.dfs_recursive(each_node)
+				if not self.visited[each_node]:
+					self.dfs_recursive(each_node)
 
 	def dfs_iterative(self, start_node):
 		stack = [start_node]
