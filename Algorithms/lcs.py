@@ -1,9 +1,11 @@
+# longest common subsequence and longest common substring
 def lcs(a, b, i, j):
 	if i == 0 or j == 0:
 		return 0
 	if a[i-1] == b[j-1]:
 		return 1 + lcs(a,b,i-1,j-1)
 	return max(lcs(a,b,i-1,j), lcs(a,b,i,j-1))
+
 
 def lcs_iterative(a, b):
 	n = len(a)
@@ -51,4 +53,4 @@ b = 'cdbefe'
 # a = 'abcdxyzo'
 # b = 'axozbmdllo'
 # print lcs(a,b, len(a), len(b))
-# lcs_iterative(a,b)
+lcs_iterative(a,b)
